@@ -3,7 +3,7 @@
 CFG_DIR              = $(CURDIR)/config
 GRISP_FILES_DIR      = $(CURDIR)/grisp/grisp_base/files
 TOOLS_DIR            = $(CURDIR)/tools
-# HOST_REBAR           = rebar3
+#HOST_REBAR           = rebar3
 # REBAR                = $(TOOLS_DIR)/rebar3
 REBAR                = rebar3
 # LIB_CACHE_DIR          = $(LOCAL_REBAR_DIR)/lib/*/ebin
@@ -77,6 +77,7 @@ deploy:
 	$(PRE) \
         export NAME=$(echo hostname -s) && \
         export PEER_IP=$(ifconfig | grep "inet " | grep -m 1 -Fv 127.0.0.1 | awk '{print $2}' | sed 's/\./,/g') && \
+		export IP=$(ifconfig | grep "inet " | grep -m 1 -Fv 127.0.0.1 | awk '{print $2}') && \
         echo "PEER_IP=$(PEER_IP)" > $(CURDIR)/default.env && \
 	    $(REBAR) grisp deploy -n $(GRISPAPP) -v $(VERSION)
 
