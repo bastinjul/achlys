@@ -8,7 +8,7 @@
                            achlys_task_server,achlys_task_worker,
                            achlys_squadron_leader]},
               {mod,{achlys_app,[]}},
-              {applications,[kernel,stdlib,grisp]},
+              {applications,[kernel,stdlib,grisp,hera]},
               {env,[]},
               {modules,[achlys,achlys_app,achlys_sup,achlys_util,
                         achlys_config,achlys_cleaner,achlys_sensor_commander,
