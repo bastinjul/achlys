@@ -80,7 +80,7 @@ deploy:
 	$(PRE) \
         export NAME=$(NAME) && \
         export PEER_IP=$(PEER_IP) && \
-        echo "PEER_IP=$(PEER_IP)" > $(CURDIR)/default.env && \
+		export IP=$(IP) && \
 	    $(REBAR) grisp deploy -n $(GRISPAPP) -v $(VERSION)
 
 erlshell:
