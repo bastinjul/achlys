@@ -8,7 +8,7 @@
 %% Also replace {X,X,X,X} by the IP starting with "172" when executing
 %% the "hostname -I" command
 
-{host, {X,X,X,X}, ["<hostname>"]}.
+{host, {169,254,126,125}, ["julienbastin"]}.
 
 
 %--- GRiSP boards --------------------------------------------------------------

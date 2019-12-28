@@ -28,7 +28,9 @@
         }
     }},
     {boards, [
-        % achlys@my_grisp_board_1
+        % list of all other nodes of the cluster
+        % template: '<sname>@<hostname>'
+        'achlys@my_grisp_board_1'
     ]}
 ]} ,
 
