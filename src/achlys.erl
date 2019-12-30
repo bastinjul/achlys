@@ -371,3 +371,7 @@ task_flag(single) ->
     <<1>>;
 task_flag(Args) ->
     Args.
+
+test() ->
+    F = fun() -> io:format("~p~n", [pmod_maxsonar:get() * 2.54]), timer:sleep(1000) end,
+    achlys:bite(achlys:declare(print_sonar, all, permanent, F)).
