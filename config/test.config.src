@@ -30,7 +30,7 @@
     {boards, [
         % list of all other nodes of the cluster
         % template: '<sname>@<hostname>'
-        'achlys@julienbastin'
+        %'achlys@julienbastin'
         %'achlys@my_grisp_board_1'
     ]}
 ]} ,
