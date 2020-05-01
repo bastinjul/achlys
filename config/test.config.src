@@ -31,7 +31,8 @@
         % list of all other nodes of the cluster
         % template: '<sname>@<hostname>'
         %'achlys@julienbastin'
-        %'achlys@my_grisp_board_1'
+        %'achlys@my_grisp_board_1',
+        %'achlys@my_grisp_board_2'
     ]}
 ]} ,
 
@@ -57,7 +58,7 @@
 ]} ,
 
 {kernel, [
-  {logger_level, notice},
+  {logger_level, all},
   {logger, [
         %% Console logger
         {handler, default, logger_std_h,
